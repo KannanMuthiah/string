@@ -1,0 +1,28 @@
+openapi: "3.0.0"
+info:
+  version: 1.0.0
+  title: String
+servers:
+  - url: http://localhost:8080
+paths:
+  /utilities:
+    get:
+      summary: Gets Hello World
+      operationId: utilities
+      tags:
+        - utilities
+      responses:
+        '200':
+          description: String manipulation utilities
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Response"
+components:
+  schemas:
+    Response:
+      required:
+        - text
+      properties:
+        text:
+          type: string
