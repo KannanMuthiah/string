@@ -7,10 +7,17 @@ servers:
 paths:
   /utilities:
     get:
-      summary: Gets Hello World
+      summary: String Manipulation Utilities
       operationId: utilities
       tags:
         - utilities
+      parameters:
+        - name: action
+          in: query
+          description: the action that should be executed
+          required: true
+          schema:
+            type: string
       responses:
         '200':
           description: String manipulation utilities
