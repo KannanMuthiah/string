@@ -1,7 +1,7 @@
-package org.kanmut.string.controllers;
+package kmuthiah.string.v1.controllers;
 
-import org.kanmut.string.api.UtilitiesApi;
-import org.kanmut.string.models.Response;
+import kmuthiah.string.v1.api.UtilitiesApi;
+import kmuthiah.string.v1.models.Response;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RestController;

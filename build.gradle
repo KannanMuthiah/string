@@ -5,8 +5,8 @@ plugins {
 	id 'java'
 }
 
-group = 'org.kanmut'
-version = '0.0.1-SNAPSHOT'
+group = 'kmuthiah.string'
+version = '1.0.0-SNAPSHOT'
 sourceCompatibility = '11'
 
 repositories {
@@ -31,9 +31,9 @@ openApiGenerate {
 	generatorName = "spring"
 	inputSpec = "$projectDir/src/main/resources/service.yaml"
 	outputDir = "$buildDir/generated"
-	apiPackage = "org.kanmut.string.api"
-	invokerPackage = "org.kanmut.string"
-	modelPackage = "org.kanmut.string.models"
+	apiPackage = "kmuthiah.string.v1.api"
+	invokerPackage = "kmuthiah.string.v1"
+	modelPackage = "kmuthiah.string.v1.models"
 	configOptions = [
 			dateLibrary: "java11",
 			interfaceOnly: "true",
