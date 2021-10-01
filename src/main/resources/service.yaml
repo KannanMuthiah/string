@@ -9,13 +9,6 @@ paths:
     get:
       summary: Generates license plate number
       operationId: generateLicensePlateNumber
-      parameters:
-        - name: country
-          in: query
-          description: country
-          required: false
-          schema:
-            type: string
       responses:
         '200':
           description: response

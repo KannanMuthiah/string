@@ -15,7 +15,7 @@ public class GenerateController implements GenerateApi {
     private static final int UPPER_CASE_A = 'A';
     private static final int NUMERIC_0 = '0';
     @Override
-    public ResponseEntity<Response> generateLicensePlateNumber(@RequestParam(value = "country", required = false) String country) {
+    public ResponseEntity<Response> generateLicensePlateNumber() {
         return new ResponseEntity<>(new Response().text(licensePlateNumber()), HttpStatus.OK);
     }
 
