@@ -8,9 +8,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class StringApiController implements UtilitiesApi {
+public class UtilitiesController implements UtilitiesApi {
     @Override
-    public ResponseEntity<Response> utilities(@RequestParam(value = "action", required = true) String action) {
+    public ResponseEntity<Response> utilities(@RequestParam(value = "action") String action) {
         return new ResponseEntity<>(new Response().text("Here is your action:" + action), HttpStatus.OK);
     }
 }

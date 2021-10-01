@@ -14,12 +14,17 @@ repositories {
 }
 
 dependencies {
-	implementation 'org.springframework.boot:spring-boot-starter-actuator'
-	implementation 'org.springframework.boot:spring-boot-starter-web'
-	implementation 'io.swagger.parser.v3:swagger-parser:2.0.20'
-	implementation 'org.openapitools:jackson-databind-nullable:0.2.1'
+	implementation 'org.springframework.boot:spring-boot-starter-actuator',
+			'org.springframework.boot:spring-boot-starter-web',
+	 		'io.swagger.parser.v3:swagger-parser:2.0.27',
+	 		'org.openapitools:jackson-databind-nullable:0.2.1'
 
-	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test',
+			'org.junit.jupiter:junit-jupiter-api:5.4.2',
+			'junit:junit:4.12'
+	testRuntimeOnly 'org.springframework.boot:spring-boot-starter-test',
+			'org.junit.jupiter:junit-jupiter-engine:5.4.2'
+
 }
 
 test {
@@ -29,8 +34,8 @@ test {
 // generates the spring controller interfaces from openapi spec in src/main/resources/service.yaml
 openApiGenerate {
 	generatorName = "spring"
-	inputSpec = "$projectDir/src/main/resources/service.yaml"
-	outputDir = "$buildDir/generated"
+	inputSpec = "$projectDir/src/main/resources/service.yaml" as Object
+	outputDir = "$buildDir/generated" as Object
 	apiPackage = "kmuthiah.string.v1.api"
 	invokerPackage = "kmuthiah.string.v1"
 	modelPackage = "kmuthiah.string.v1.models"
