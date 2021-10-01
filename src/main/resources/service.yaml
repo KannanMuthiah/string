@@ -5,6 +5,24 @@ info:
 servers:
   - url: http://localhost:8080
 paths:
+  /generate/license-plate-number:
+    get:
+      summary: Generates license plate number
+      operationId: generateLicensePlateNumber
+      parameters:
+        - name: country
+          in: query
+          description: country
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: response
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Response"
   /utilities:
     get:
       summary: String Manipulation Utilities
